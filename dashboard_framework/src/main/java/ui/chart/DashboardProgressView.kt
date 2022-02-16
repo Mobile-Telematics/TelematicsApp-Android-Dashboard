@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.library.R
+import com.dashboard_framework.R
 import kotlinx.android.synthetic.main.new_dashboard_item.view.*
 
 internal class DashboardProgressView constructor(

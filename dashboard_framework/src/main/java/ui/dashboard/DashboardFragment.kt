@@ -1,7 +1,5 @@
 package ui.dashboard
 
-import data.Globals
-import data.Globals.DASHBOARD_DISTANCE_LIMIT
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
@@ -19,14 +17,16 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.dashboard_framework.R
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
-import com.library.R
 import com.raxeltelematics.v2.sdk.TrackingApi
+import data.Globals
+import data.Globals.DASHBOARD_DISTANCE_LIMIT
 import data.extentions.format
 import data.extentions.getColorByScore
 import data.extentions.setProgressWithColor
@@ -439,7 +439,8 @@ internal class DashboardFragment constructor(private var dashboardViewModel: Das
 
         val format = if (individualData.mileageKm in 0.001..9.999) "0.0" else "0"
         include2.milage.topText.text =
-            dashboardViewModel.measuresFormatter.getDistanceByKm(individualData.mileageKm).format(format)
+            dashboardViewModel.measuresFormatter.getDistanceByKm(individualData.mileageKm)
+                .format(format)
 
         include2.trips.topText.text = (individualData.tripsCount).toString()
         include2.trips.middleText.text = getString(R.string.dashboard_new_total_trips)
