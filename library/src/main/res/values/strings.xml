@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">YOUR_LABEL</string>
+
+    <!-- onboarding -->
+
+    <!-- Login Screen -->
+
+    <!--profile-->
+
+    <!--Verify code Screen-->
+
+    <!--dashboard ecoscoring period-->
+    <string-array name="dashboard_ecoscoring_period">
+        <item>WEEK</item>
+        <item>MONTH</item>
+        <item>YEAR</item>
+    </string-array>
+
+    <string name="have_you_already_made_trip">Have you already made a trip\nbut do not see it?</string>
+    <string name="check_app_permissions">Check App Permissions ➞</string>
+
+    <!-- Change pass Screen -->
+
+    <!--account-->
+    <!--car-->
+
+    <!-- Account Wizard Profile -->
+    <string name="retry">Retry</string>
+    <string name="dashboard_new_overall_score">Overall Score</string>
+    <string name="dashboard_new_acceleration_score">Acceleration Score</string>
+    <string name="dashboard_new_braking_score">Braking Score</string>
+    <string name="dashboard_new_phone_dist_score">Phone Distraction Score</string>
+    <string name="dashboard_new_speeding_score">Speeding Score</string>
+    <string name="dashboard_new_cornering_score">Cornering Score</string>
+    <string name="dashboard_new_quantity">quantity</string>
+    <string name="dashboard_new_points">points</string>
+    <string name="dashboard_new_latest_trip_score">Latest Scored Trip</string>
+    <string name="dashboard_new_total_trips">Total Trips</string>
+    <string name="dashboard_new_km">km</string>
+    <string name="dashboard_new_mi">mi</string>
+    <string name="dashboard_new_mileage">Mileage</string>
+    <string name="dashboard_new_hours">hours</string>
+    <string name="dashboard_new_time_driven">Time Driven</string>
+    <string name="dashboard_new_rank">Rank</string>
+    <string name="dashboard_new_drive_as_you_do_normally">Drive as you do normally</string>
+    <string name="dashboard_new_start_driving_to_reveal_your_score">Start Driving to Reveal Your Score!</string>
+    <string name="dashboard_new_start_driving_to_reveal_your_score_alt">\?</string>
+    <string name="template_km">%1$s km</string>
+    <string name="template_km_h">%1$s km/h</string>
+    <string name="template_mi_h">%1$s mi/h</string>
+    <string name="template_mi">%1$s mi</string>
+    <string name="complete_your_first_trip_to_unlock_scoring">Complete your First Trip to Unlock Scoring</string>
+    <string name="driving_streaks">Driving Streaks</string>
+    <string name="no_speeding">No Speeding</string>
+    <string name="no_phone_usage">No Phone Usage</string>
+    <string name="learn_more">Learn more >></string>
+    <string name="eco_scoring">Eco Scoring</string>
+    <string name="make_10_trips">Make 10 Trips with Eco Driving Score of 90 or higher to improve your driving score!</string>
+    <string name="driving_style_impacts">Driving style impacts on your expenses on fuel, tires and brakes. Improve your driving style and reduce expenses.</string>
+    <string name="my_activity">MY ACTIVITY</string>
+    <string name="average_speed">Average Speed</string>
+    <string name="max_speed">Max Speed</string>
+    <string name="average_trip_distance">Average Trip Distance</string>
+
+    <!--authorization errors message-->
+    <string name="dashboard_eco_fuel">Fuel</string>
+    <string name="dashboard_eco_tyres">Tyres</string>
+    <string name="dashboard_eco_brakes">Brakes</string>
+    <string name="dashboard_eco_cost">Cost of ownership</string>
+
+    <!--MEASURES-->
+
+    <!--LEADERBOARD-->
+    <string name="leaderboard_mileage">Mileage</string>
+    <string name="leaderboard_rate">Overall Safety Score</string>
+    <string name="leaderboard_acceleration">Acceleration</string>
+    <string name="leaderboard_deceleration">Braking</string>
+    <string name="leaderboard_distraction">Distraction</string>
+    <string name="leaderboard_speeding">Speeding</string>
+    <string name="leaderboard_turn">Cornering</string>
+    <string name="leaderboard_time_driven">Time Driven</string>
+    <string name="leaderboard_total_trips">Total Trips</string>
+
+    <!--REWARDS-->
+
+    <!--ERRORS-->
+</resources>
