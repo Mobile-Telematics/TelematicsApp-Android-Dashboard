@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import com.library.R
+import com.dashboard_framework.R
 
 internal class DashboardEcoScoringTabFragment : Fragment() {
-    override fun onCreateView(inflater: LayoutInflater,
-                              container: ViewGroup?, savedInstanceState: Bundle?): View {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
         return inflater.inflate(R.layout.layoit_tab_eco_scoring, container, false)
     }
 
@@ -23,7 +25,8 @@ internal class DashboardEcoScoringTabFragment : Fragment() {
 
         val averageSpeed = mapToString(stringResKmH, args?.getDouble(AVERAGE_SPEED_KEY))
         val maxSpeed = mapToString(stringResKmH, args?.getDouble(MAX_SPEED_KEY))
-        val averageTripDistance = mapToString(stringResKm, args?.getDouble(AVERAGE_TRIP_DISTANCE_KEY))
+        val averageTripDistance =
+            mapToString(stringResKm, args?.getDouble(AVERAGE_TRIP_DISTANCE_KEY))
 
         (view.findViewById(R.id.tab_eco_scoring_text1) as TextView).text = averageSpeed
         (view.findViewById(R.id.tab_eco_scoring_text2) as TextView).text = maxSpeed
@@ -31,11 +34,11 @@ internal class DashboardEcoScoringTabFragment : Fragment() {
     }
 
     private fun mapToString(strRes: Int, p: Double?): String =
-            p?.let {
-                if (it < 0) "?" else getString(strRes, String.format("%.0f", it))
-            } ?: run {
-                String.format("%.0f", .0)
-            }
+        p?.let {
+            if (it < 0) "?" else getString(strRes, String.format("%.0f", it))
+        } ?: run {
+            String.format("%.0f", .0)
+        }
 
     companion object {
         const val AVERAGE_SPEED_KEY = "AVERAGE_SPEED_KEY"

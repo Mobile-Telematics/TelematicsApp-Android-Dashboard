@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
-import com.library.R
+import com.dashboard_framework.R
 import data.model.tracking.MeasuresFormatter
 import domain.model.measures.DistanceMeasure
 import domain.model.statistics.StatisticEcoScoringTabsData

@@ -1,6 +1,6 @@
 import android.content.Context
+import com.dashboard_framework.BuildConfig
 import com.google.gson.Gson
-import com.library.BuildConfig
 import data.api.DriveCoinsApi
 import data.api.LeaderboardApi
 import data.api.UserStatisticsApi

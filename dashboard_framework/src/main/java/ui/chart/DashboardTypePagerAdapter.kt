@@ -3,7 +3,7 @@ package ui.chart
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import com.library.R
+import com.dashboard_framework.R
 import domain.model.statistics.ScoreType
 import domain.model.statistics.ScoreTypeModel
 import kotlinx.android.extensions.LayoutContainer

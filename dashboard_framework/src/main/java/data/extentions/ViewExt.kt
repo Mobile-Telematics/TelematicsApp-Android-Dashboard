@@ -3,7 +3,7 @@ package data.extentions
 import android.content.res.ColorStateList
 import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
-import com.library.R
+import com.dashboard_framework.R
 
 internal fun ProgressBar.setProgressWithColor(p: Int) {
 
