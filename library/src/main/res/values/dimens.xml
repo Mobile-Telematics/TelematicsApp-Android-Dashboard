@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Overrided SDK resources -->
+    <dimen name="dialog_telematics_view_bubble_corners">20dp</dimen>
+    <dimen name="dialog_telematics_button_corners">35dp</dimen>
+
+    <!-- Buttons -->
+
+    <!-- Progress Buttons -->
+
+    <!-- Custom Dialog -->
+
+    <!-- No buttons Dialog -->
+
+    <!-- Zerro layout -->
+
+    <!-- Splash -->
+
+    <!-- On boarding-->
+
+    <!-- Login Zen  -->
+
+    <!-- Welcomeback  -->
+
+    <!-- Feed Events Content Zen -->
+
+    <!-- Trip Details Content Zen -->
+
+    <!-- Dashboard Content Zen -->
+
+    <!-- Dashboard Tab Score Item -->
+
+    <!-- Eco/Safety Driving Content -->
+
+    <!-- Eco/Safety Driving ProgressBar Item -->
+
+    <!-- Eco/Safety Driving Hint Item -->
+
+    <!-- Eco/Safety Driving Delta Percent Item -->
+
+    <!-- Eco/Safety Driving My Activity Tab area -->
+
+    <!-- Eco/Safety Driving My Activity Content area -->
+
+    <!-- Eco/Safety Driving My Activity Content Item -->
+
+    <!-- Dashboard Discount Content -->
+
+    <!-- Dashboard Discount Item -->
+
+    <!-- Dashboard HUB Content Zen -->
+
+    <!-- Dashboard HUB Tab Mileage Progress Item -->
+
+    <!-- Dashboard HUB Tab Score Item -->
+
+    <!-- Dashboard HUB Tab Telematics Item -->
+
+    <!-- Dashboard HUB Tab Balance Item -->
+
+    <!-- Dashboard HUB New Challenge Item -->
+
+    <!-- Dashboard HUB Active Challenge Item -->
+
+    <!-- Dashboard HUB Pager Item -->
+
+    <!-- Dashboard HUB Leaderboard Item -->
+
+    <!-- App Settings-->
+
+    <!-- Change Pass Settings-->
+
+    <!-- Networks Content Zen -->
+
+    <!-- Rewards Content Zen -->
+
+    <!-- Rewards Dialog Content Zen -->
+
+    <!-- Rewards Invite Content Zen -->
+
+    <!-- Leaderboard item -->
+
+    <!-- Account -->
+
+    <!-- Account Dialog Content Zen -->
+
+    <!-- Account Wizard -->
+
+    <!-- Padding item decoration -->
+</resources>

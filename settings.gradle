@@ -1,0 +1,3 @@
+rootProject.name = "DashboardFramework"
+include ':app'
+include ':library'
