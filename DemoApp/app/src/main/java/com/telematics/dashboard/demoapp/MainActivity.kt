@@ -1,7 +1,7 @@
 package com.telematics.dashboard.demoapp
 
 import Credentials
-import DashboardFramework
+import DashboardModule
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -47,12 +47,12 @@ class MainActivity : AppCompatActivity() {
     private fun showDashboard() {
 
         runOnUiThread {
-            val dashboardFramework = DashboardFramework.getInstance()
-            dashboardFramework.initialize(this)
-            dashboardFramework.setHereMapApiKey(hereKey)
-            dashboardFramework.setCredentials(Credentials(deviceToken, accessToken))
-            dashboardFramework.setDashboardMileageLimitKm(10)
-            showFragment(dashboardFramework.getDashboardFragment())
+            val dashboardModule = DashboardModule.getInstance()
+            dashboardModule.initialize(this)
+            dashboardModule.setHereMapApiKey(hereKey)
+            dashboardModule.setCredentials(Credentials(deviceToken, accessToken))
+            dashboardModule.setDashboardMileageLimitKm(10)
+            showFragment(dashboardModule.getDashboardFragment())
         }
     }
 

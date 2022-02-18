@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.telematics.dashboardframework"
+        applicationId "com.telematics.dashboardmodule"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -37,6 +37,5 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: '*')
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
-
-    implementation project(':dashboard_framework')
+    implementation project(':dashboard_module')
 }
