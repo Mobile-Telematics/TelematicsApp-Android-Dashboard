@@ -3,15 +3,15 @@ Dashboard module of TelematicsApp-Android
 
 ## Description
 
-This library is created by DATA MOTION PTE. LTD. and allows you to integrate with our UserStatistic API and Dashboard view in a few steps.
+This module is created by DATA MOTION PTE. LTD. and allows you to integrate with our UserStatistic API and Dashboard view in a few steps.
 
 ## Credentials
 
-Before you start using the framework, make sure you registered a company account in [DataHub](https://app.damoov.com/). If you are new, please refer to the [documentation](https://docs.telematicssdk.com/docs/setting-up-the-company-account) and register your company account in DataHub. [Sing Up](https://app.damoov.com/user/registration)
+Before you start using this module, make sure you registered a company account in [DataHub](https://app.damoov.com/). If you are new, please refer to the [documentation](https://docs.damoov.com/docs/setting-up-the-company-account) and register your company account in DataHub. [Sing Up](https://app.damoov.com/user/registration)
 
 ## Setup
 
-1. Download from this repository [dashboard_framework](https://github.com/Mobile-Telematics/TelematicsApp-Android-Dashboard/tree/prerelease/dashboard_framework) folder
+1. Download from this repository [dashboard_module](https://github.com/Mobile-Telematics/TelematicsApp-Android-Dashboard/tree/prerelease/dashboard_framework) folder
 2. Move this folder to the project folder next to the `app` folder
 ![](https://github.com/Mobile-Telematics/TelematicsApp-Android-Dashboard/blob/prerelease/img_readme/img.png)
 3. In your `settings.gradle (Project settings)`  add `include ':dashboard_module'`
@@ -60,11 +60,11 @@ Copy API KEY and paste it to `setHereMapApiKey` method.
 
 `deviceToken` - is the main individual SDK user identifier. This identifier is used as a key across all our services.
 
-`accessToken` - or JSON Web Token (JWT) is the main UserService API key, that allows you to get user individual statistics and user scoring by UserService APIs calls.
+`accessToken` - or JSON Web Token (JWT) is the main UserService API key, that allows you to get user individual statistics and user scoring by UserStatistics API calls.
 
 ### Set Dashboard mileage limit
 
-A value that determines when the dashboard will be unlocked to display statistics.
+A value that determines when the dashboard will be unlocked to display statistics and scorings.
 
 ``` kotlin
     dashboardModule.setDashboardMileageLimitKm(10)
@@ -122,7 +122,7 @@ Happy coding!
 
 [Official API services web-page](https://www.damoov.com/telematics-api/)
 
-[Official API references](https://docs.telematicssdk.com/reference)
+[Official API references](https://docs.damoov.com/reference)
 
 [Official ZenRoad web-page](https://www.damoov.com/telematics-app/)
 
