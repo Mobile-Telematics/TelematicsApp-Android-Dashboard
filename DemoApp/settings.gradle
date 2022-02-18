@@ -8,4 +8,4 @@ pluginManagement {
 
 rootProject.name = "DemoApp"
 include ':app'
-include ':dashboard_framework'
+include ':dashboard_module'
