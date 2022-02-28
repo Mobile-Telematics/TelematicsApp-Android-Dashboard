@@ -624,6 +624,7 @@ internal class DashboardFragment constructor(private var dashboardViewModel: Das
 
     private fun initTracking() {
 
+        if (Globals.DEVICE_TOKEN.isBlank()) return
         val mTrackingApi = TrackingApi.getInstance()
         mTrackingApi.initialize(requireContext(), null)
         mTrackingApi.setDeviceID(Globals.DEVICE_TOKEN)
