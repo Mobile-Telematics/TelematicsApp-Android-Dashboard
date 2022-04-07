@@ -44,6 +44,7 @@ import kotlinx.android.synthetic.main.layout_eco_scoring_dashboard.view.*
 import kotlinx.android.synthetic.main.layout_in_dashboard_empty_last_trip.view.*
 import kotlinx.android.synthetic.main.layout_item_eco_scoring.view.*
 import kotlinx.android.synthetic.main.layout_last_trip_dashboard.view.*
+import me.relex.circleindicator.Config
 import ui.chart.DashboardTypePagerAdapter
 import ui.ecoscoring.DashboardEcoScoringTabAdapter
 import kotlin.math.roundToInt
@@ -179,9 +180,7 @@ internal class DashboardFragment constructor(private var dashboardViewModel: Das
 
         Log.d(TAG, "observeRank: start")
 
-        fun setRank(rank: String) {
-            Log.d(TAG, "setRank: rank $rank")
-
+        fun setRank(rank: String, isZero: Boolean) {
             val spannable = SpannableString(rank)
             spannable.setSpan(
                 ForegroundColorSpan(
@@ -193,18 +192,28 @@ internal class DashboardFragment constructor(private var dashboardViewModel: Das
                 rank.indexOf("#"), rank.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
             )
             rankValue.text = spannable
+
+            if (isZero) {
+                rankValue.text = rank
+                rankValue.setTextColor(
+                    ContextCompat.getColor(
+                        requireContext(),
+                        R.color.colorGrayText
+                    )
+                )
+            }
         }
 
         dashboardViewModel.getRank().observe(viewLifecycleOwner) { result ->
             result.onSuccess {
                 Log.d(TAG, "observeRank: onSuccess r: $it")
                 val s = resources.getString(R.string.dashboard_new_rank) + " #${it}"
-                setRank(s)
+                setRank(s, it <= 0)
             }
             result.onFailure {
                 Log.d(TAG, "observeRank: onFailure e: ${it.printStackTrace()}")
                 val s = resources.getString(R.string.dashboard_new_rank) + " #—"
-                setRank(s)
+                setRank(s, true)
             }
         }
     }
@@ -356,6 +365,21 @@ internal class DashboardFragment constructor(private var dashboardViewModel: Das
 
         //show all
         dashboardEmpty.visibility = View.VISIBLE
+
+        return
+        val grayColor = Color.rgb(161, 161, 161)
+        val grayColorStateList = ColorStateList.valueOf(grayColor)
+
+        val dGrayColor = Color.rgb(163, 163, 163)
+        val dGrayColorStateList = ColorStateList.valueOf(dGrayColor)
+
+        val c = Config.Builder()
+            .drawable(R.drawable.ic_slide_dot_unchecked)
+            .build()
+        progressIndicator.initialize(c)
+
+        include.coinsImg.imageTintList = dGrayColorStateList
+        include.coinsValue.setTextColor(grayColor)
     }
 
     private fun fillData(data: List<ScoreTypeModel>, scoreData: List<ScoreTypeModel>) {
@@ -624,6 +648,7 @@ internal class DashboardFragment constructor(private var dashboardViewModel: Das
 
     private fun initTracking() {
 
+        if (Globals.DEVICE_TOKEN.isBlank()) return
         val mTrackingApi = TrackingApi.getInstance()
         mTrackingApi.initialize(requireContext(), null)
         mTrackingApi.setDeviceID(Globals.DEVICE_TOKEN)

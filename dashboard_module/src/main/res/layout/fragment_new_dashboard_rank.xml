@@ -16,6 +16,7 @@
         android:paddingEnd="8dp">
 
         <ImageView
+            android:id="@+id/coinsImg"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
