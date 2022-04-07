@@ -44,6 +44,16 @@ internal class ProgressView @JvmOverloads constructor(
         ColorName.GREEN to Color.rgb(209, 231, 202)
     )
 
+    private val grayLineColors = mapOf(
+        ColorName.RED to Color.rgb(194, 194, 194),
+        ColorName.ORANGE to Color.rgb(194, 194, 194),
+        ColorName.YELLOW to Color.rgb(194, 194, 194),
+        ColorName.GREEN to Color.rgb( 194, 194, 194)
+    )
+
+    private var currentLineColor = lineColors
+    private var currentBackColors = backColors
+
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         oval = RectF(30f, 30f, width - 30f, height.toFloat())
@@ -185,11 +195,11 @@ internal class ProgressView @JvmOverloads constructor(
     }
 
     private fun getLineColor(): Int = when (progress) {
-        in 0..62 -> lineColors[ColorName.RED]!!
-        in 63..71 -> lineColors[ColorName.ORANGE]!!
-        in 72..80 -> lineColors[ColorName.ORANGE]!!
-        in 81..89 -> lineColors[ColorName.YELLOW]!!
-        else -> lineColors[ColorName.GREEN]!!
+        in 0..62 -> currentLineColor[ColorName.RED]!!
+        in 63..71 -> currentLineColor[ColorName.ORANGE]!!
+        in 72..80 -> currentLineColor[ColorName.ORANGE]!!
+        in 81..89 -> currentLineColor[ColorName.YELLOW]!!
+        else -> currentLineColor[ColorName.GREEN]!!
     }
     //endregion
 
@@ -242,6 +252,15 @@ internal class ProgressView @JvmOverloads constructor(
         paintArc.strokeCap = Paint.Cap.ROUND
         mCanvas.drawArc(oval, 375F, 9F, false, paintArc)
         canvas.drawBitmap(bitmap, 0f, 0f, mBitmapPaint)
+    }
+
+    fun drawGrayLines() {
+        currentLineColor = grayLineColors
+        currentBackColors = grayLineColors
+        if (!this::mCanvas.isInitialized) return
+        val canvas = this.mCanvas
+        if (progress > 0)
+            drawLine(canvas)
     }
     //endregion
 

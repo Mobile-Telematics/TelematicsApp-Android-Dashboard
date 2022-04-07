@@ -1,6 +1,7 @@
 package ui.chart
 
 import android.content.Context
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
@@ -36,7 +37,13 @@ internal class DashboardProgressView constructor(
             }
         }
 
-        if (progress <= 0) return
+        if (progress <= 0) {
+            dashboardProgress.drawGrayLines()
+            dashboardText.setTextColor(Color.rgb(141, 141, 141))
+            dashboardType.setTextColor(Color.rgb(141, 141, 141))
+            dashboardIcon.setImageResource(R.drawable.ic_great_score_gray)
+            return
+        }
         dashboardProgress.progress = progress
 
         when (progress) {

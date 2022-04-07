@@ -24,6 +24,7 @@
     <color name="colorOrangeText">#ff7e00</color>
     <color name="colorYellowText">#fedb41</color>
     <color name="colorGreenText">#54c751</color>
+    <color name="colorGrayText">#A3A3A3</color>
 
     <!-- Map -->
 
